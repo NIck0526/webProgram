@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h2 align="center"> SELECT FORM TEST.....	 </h2><p>
+<form action="SelectServlet2" method="get">
+ ID : <input type="text" name="myId"><br><br>
+ PASSWORD : <input type="password" name="mypass"><br><br>
+ <b>당신의 취미를 선택하세용</b><br>
+ <select name="hobby" multiple="multiple">
+ 	<option value="Reading">Rading</option>
+ 	<option value="Camping">Camping</option>
+ 	<option value="Cooking">Cooking</option>
+ 	<option value="Football">Football</option>
+ 	<option value="Driving">Driving</option>
+ </select>
+ <hr>
+ <!-- hidden의 용도는 브라우저에 값이 노출되지 않고 숨겨서 서버로 전달하는 기능  -->
+ <input type="hidden" name="command" value="register">
+ <input type="submit" value="send!">
+ </form>
+</body>
+</html>
