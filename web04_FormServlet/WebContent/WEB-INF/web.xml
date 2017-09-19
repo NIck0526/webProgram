@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>web04_FormServlet</display-name>
-	<filter>
-	<filter-name>EncodingFilter</filter-name>
-	<filter-class>servlet.filter.EncodingFilter</filter-class>
-	</filter>
-<filter-mapping>
-	<filter-name>EncodingFilter</filter-name>
-	<url-pattern>/*</url-pattern>
-</filter-mapping>
-
-
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>servlet.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
   <servlet>
     <description></description>
     <display-name>FormServlet</display-name>
@@ -50,5 +48,15 @@
   <servlet-mapping>
     <servlet-name>ChoiceServlet</servlet-name>
     <url-pattern>/ChoiceServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MultiFormServlet5</display-name>
+    <servlet-name>MultiFormServlet5</servlet-name>
+    <servlet-class>form.servlet.MultiFormServlet5</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MultiFormServlet5</servlet-name>
+    <url-pattern>/MultiForm</url-pattern>
   </servlet-mapping>
 </web-app>

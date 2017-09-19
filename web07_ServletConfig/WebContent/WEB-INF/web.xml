@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>servlet.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <servlet-name>EngGreetServlet</servlet-name>
+    <servlet-class>servlet.config.MusicalGreetServlet</servlet-class>
+    <init-param>
+    	<param-name>Greet</param-name>
+    	<param-value>Welcome Cats Musical ...Nice Good Day..</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EngGreetServlet</servlet-name>
+    <url-pattern>/EngGreet</url-pattern>
+   </servlet-mapping>
+   
+     <servlet>
+    <servlet-name>FrenchGreetServlet</servlet-name>
+    <servlet-class>servlet.config.MusicalGreetServlet</servlet-class>
+    <init-param>
+    	<param-name>Greet</param-name>
+    	<param-value>Bongjour Mushur.....cettier amonder...Catss</param-value>
+    </init-param>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FrenchGreetServlet</servlet-name>
+    <url-pattern>/FreGreet</url-pattern>
+   </servlet-mapping>
+   
+    <servlet>
+    <servlet-name>KorGreetServlet</servlet-name>
+    <servlet-class>servlet.config.MusicalGreetServlet</servlet-class>
+    <init-param>
+    	<param-name>Greet</param-name>
+    	<param-value>환영합니다..뮤지컬 Cats에 오신것을 환영합니다..주연배우들을 소개드립니다. ...</param-value>
+    </init-param>
+    <load-on-startup>3</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>KorGreetServlet</servlet-name>
+    <url-pattern>/KorGreet</url-pattern>
+   </servlet-mapping>
+</web-app>
+

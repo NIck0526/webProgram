@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function bestMovie(){
+		/*
+		1. 어떤 영화도 선택하지 않고 버튼을 클릭한다면
+			 "영화선택은 필수~~~" 메세지 띄우고 
+		2. 영화 하나를 선택한 후 버튼이 클릭되었다면
+			"~~~영화를 최고의 영화로 선택하셨습니다!!"
+		*/
+		
+		var arr = document.movieFrm.movie;
+		//alert(arr.length);
+		if(arr.value!=="")
+	 		alert("당신의 최고의 영화는 "+arr.value+"입니다!")
+		else
+			alert("선택하시오")
+		
+	 	
+	 	}
+</script>
+</head>
+<body>
+<b>가장 재미있게 본 영화는???</b><p>
+<form name="movieFrm">
+	<input type="radio" name="movie" value="청년경찰">청년경찰<br>
+	<input type="radio" name="movie" value="추격자">추격자<br>
+	<input type="radio" name="movie" value="쿠우">쿠우<br>
+	<input type="radio" name="movie" value="뽀로로">뽀로로<br>
+	<input type="radio" name="movie" value="포켓몬스터">포켓몬스터<br>
+	
+	<input type="button" value="bestMovie" onclick="bestMovie()">
+	
+	
+</form>
+
+</body>
+</html>

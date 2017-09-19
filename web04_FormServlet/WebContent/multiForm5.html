@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#frm{text-align:center;
+		
+	}
+
+</style>
+<script type="text/javascript">
+	function push() {
+		alert("버튼을 하였다!!");
+		
+	}
+</script>
+</head>
+<body>
+<h2 align="center">MULTI FORM TEST....</h2><p>
+<form action="MultiForm" method="post" id="frm">
+ID : <input type="text" name="id" value="lee"><br><br>
+PASSWORD : <input type="password" id="pass" ><br><br>
+영화보기 <input type="checkbox"	name="hobby" value="movie"> <br>
+독서하기	<input type="checkbox"	name="hobby" value="reading"><br>
+음악듣기	<input type="checkbox"	name="hobby" value="music"><br>
+드라이빙	<input type="checkbox"	name="hobby" value="driving"><br>
+	
+성별:
+여<input type="radio" name="gender" value="female">
+남<input type="radio" name="gender" value="male">
+
+<input type="hidden" name="command" value="register"><br><br>
+<hr>
+<select multiple="multiple" name="tel">
+	<option>010</option>
+	<option>011</option>
+	<option>016</option>
+	<option value="SK C&C">017</option>
+</select><br><br>
+<hr>
+<textarea rows="10" cols="60" name="intro">KOSTA 사이트를 방문해 주셔서 감사합니다.</textarea><p>
+
+<input type="submit" value="SEND">
+<input type="reset" value="CLEAR">
+<input type="button" value="Button" onclick="push()">
+	
+</form>
+</body>
+</html>

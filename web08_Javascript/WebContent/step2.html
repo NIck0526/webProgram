@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function checkEnter(){
+		/* var flag = confirm("성인만 입장 가능한 사이트 입니다.. 성인이니??");
+		return flag; */
+		return confirm("성인만 입장 가능한 사이트 입니다.. 성인이니??");
+	
+	}
+
+</script>
+</head>
+<body bgcolor="yellow">
+	<form action="adult.jsp" onsubmit="return checkEnter()">
+		<h1>입장하고 싶어요...</h1>
+		<input type="submit" value="성인페이지로 입장합니다..." > <!-- 이동하는 곳에 onsubmit써주기 -->
+	</form>
+
+</body>
+</html>

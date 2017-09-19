@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+ *  1. 아이디를 입력하지 않고 버튼 클릭:
+	 "아이디 입력은 필수 사항입니다." 메세지 띄우고 / 포커스 
+	2. 패스워드를 입력하지 않앗을때도
+	 "패스워드 입력은 필수 사항 입니다"메세지 띄우고 / 포커스
+	3. 아이디, 패스워드를 모두 입력하고 버튼을 클릭 :
+		두개의 정보를 팝업창으로 띄운다.
+ */
+
+ function showLogin(){
+	var frm = document.loginFrm;
+	if(frm.id.value==""){//아이디를 입력하지 않았다면
+		alert("아이디는 꼭 입력해야한당께!!!");
+		frm.id.focus();
+	}else if(frm.password.value==""){//패스워드를 입력하지 않았다면
+		alert("패스워드는 당근 입력해야한당께!!!");
+		frm.password.focus();
+	}else{
+		var userId= frm.id.value;
+		var userPass= frm.password.value;
+		alert("ID :: "+userId+",  PASSWORD :: "+userPass);
+		location.href=
+		"http://localhost:8888/web08_Javascript/login.jsp?id="+userId+"&&pass="+userPass;
+
+	}
+}
+</script>
+</head>
+<body>
+<h2 align="center"> LOGIN FORM TABLE.....</h2><p>
+<form name="loginFrm" id="login">
+<table border="1" align="center">
+	<tr>
+	<td>아이디</td>
+	<td><input type="text" name="id"></td>	
+	</tr>
+	<tr>
+	<td>패스워드</td>
+	<td><input type="password" name="password"></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+		<input type="button" value="LOGIN" onclick="showLogin()"></td>	
+	</tr>
+
+</table>
+</form>
+</body>
+</html>

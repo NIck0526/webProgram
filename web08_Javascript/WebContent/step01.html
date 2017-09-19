@@ -1,0 +1,39 @@
+<!--
+html : 문서의 구조를 지정	
+css : html 문서를 presentation
+javascript : html의 고정적인 문서를 동적으로
+			 이벤트 처리
+			 JQuery
+  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javascript 변수선언법 :: 타입을 명시하지 않는다.</title>
+<script type="text/javascript">
+	var count = 5;
+	var name = "민정아";
+	for(var i=1; i<=count; i++)
+		document.write(name+"~~~~~<br>");
+	
+	function test1(){
+		alert("test1!!!!!");
+	}
+	
+	function test2(str, name){
+		//alert(str+","+name);
+		var data =test3(name);
+		alert(str+""+data);
+	}
+	
+	function test3(message){
+		return message+"멍떄리기"
+	}
+</script>
+	
+</head>
+<body>
+<input type="button" value="test1" onclick="test1()">
+<input type="button" value="test2" onclick="test2('우유빛깔','아이유')">
+</body>
+</html>
