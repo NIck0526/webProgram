@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>web10_ServletContextLogin</display-name>
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>servlet.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <context-param>
+  	<param-name>userFile</param-name>
+  	<param-value>WEB-INF\member.txt</param-value>
+  </context-param>
+  <listener>
+  	<listener-class>listener.login.LoginListener</listener-class>
+  </listener>
+  <servlet>
+    <description></description>
+    <display-name>ServletLogin</display-name>
+    <servlet-name>ServletLogin</servlet-name>
+    <servlet-class>servlet.login.ServletLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletLogin</servlet-name>
+    <url-pattern>/ServletLogin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginContext</display-name>
+    <servlet-name>LoginContext</servlet-name>
+    <servlet-class>servlet.context.LoginContext</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginContext</servlet-name>
+    <url-pattern>/LoginContext</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>listener.login.LoginListener</listener-class>
+  </listener>
+</web-app>

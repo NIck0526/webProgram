@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>web09_ServletContext</display-name>
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>servlet.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+  
+  <context-param>
+  	<param-name>NAME</param-name>
+  	<param-value>LEE</param-value>
+  </context-param>
+   <context-param>
+  	<param-name>JOB</param-name>
+  	<param-value>steve jobs</param-value>
+  </context-param>
+   <context-param>
+  	<param-name>E-mail</param-name>
+  	<param-value>lee@naver.com</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>userFile</param-name>
+  	<param-value>WEB-INF\member.txt</param-value>
+  </context-param>
+  <listener>
+  	<listener-class>listener.MyServletListener</listener-class>
+  </listener>
+  
+  <servlet>
+    <description></description>
+    <display-name>ServletContextWriting</display-name>
+    <servlet-name>ServletContextWriting</servlet-name>
+    <servlet-class>servlet.context.ServletContextWriting</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletContextWriting</servlet-name>
+    <url-pattern>/SC1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletContextReading</display-name>
+    <servlet-name>ServletContextReading</servlet-name>
+    <servlet-class>servlet.context.ServletContextReading</servlet-class>
+     <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletContextReading</servlet-name>
+    <url-pattern>/SC2</url-pattern>
+  </servlet-mapping>
+</web-app>

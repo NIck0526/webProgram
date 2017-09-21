@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function enterForm() {
+		//var f = documnet.frm;
+		var f = document.getElementById("formFrm");
+		if(isNaN(f.age.value)){ // Not a Number, 문자가 입력됬다면..
+			alert("나이는 숫자에 불과합니다.");
+			return false;
+		}
+		
+	}
+</script>
+</head>
+<body>
+<form action="EntranceServlet" onsubmit="return enterForm()" name="frm" id="formFrm">
+<h2 align="center">Cafe Entrance Form</h2><p>
+이름 :: <input type="text" name="name" required="required"><br><br>
+나이 :: <input type="password" name="age" required="required"><br><br>
+<input type="submit" value="전송">
+</form>
+</body>
+</html>
