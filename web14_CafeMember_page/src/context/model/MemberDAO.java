@@ -25,7 +25,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-import config.OracleInfo;
+
 
 public class MemberDAO {
 	private DataSource ds;

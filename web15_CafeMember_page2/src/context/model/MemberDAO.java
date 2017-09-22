@@ -15,17 +15,17 @@ package context.model;
  */
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-import config.OracleInfo;
+
 
 public class MemberDAO {
 	private DataSource ds;
@@ -104,10 +104,27 @@ public class MemberDAO {
 		}
 		return vo;
 	}//findByIdMember
-	public static void main(String[ ] args) throws Exception {
-		MemberDAO dao = new MemberDAO();
+	
+	public ArrayList<MemberVO> getAllMembers() throws SQLException{
+		Connection conn = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		ArrayList<MemberVO> list =new ArrayList<MemberVO>();
 		
-		//dao.registerMember(new MemberVO("111", "111", "홍길동", "남원"));
+		conn = getConnection();
+		
+		String query="SELECT * FROM member";
+		ps = conn.prepareStatement(query);
+		
+		rs= ps.executeQuery();
+		while(rs.next()) {
+			list.add(new MemberVO(rs.getString("id"),
+								rs.getString("name"),
+								rs.getString("password"),
+								rs.getString("address")));
+		}
+		
+		return list;
 	}
 }
 
