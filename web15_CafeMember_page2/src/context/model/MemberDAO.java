@@ -105,7 +105,7 @@ public class MemberDAO {
 		return vo;
 	}//findByIdMember
 	
-	public ArrayList<MemberVO> getAllMembers() throws SQLException{
+	public ArrayList<MemberVO> showAllMember() throws SQLException{
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;

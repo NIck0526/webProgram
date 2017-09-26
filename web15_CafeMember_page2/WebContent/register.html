@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script type="text/javascript">
 	function passCheck() {
 		//비밀번호가 일치하지 않으면 페이지 이동 안되도록...
@@ -18,15 +19,13 @@
 </script>
 
 <style type="text/css">
-	/* body의 배경을 dot_bg.jpg으로 깔아주세여... */
-	body{
-		background-image: url("./img/dot_bg.jpg");
-	}
+
+
 </style>
 </head>
 <body>
 <h2 align="center"><b>Register Member Form....</b></h2><p>
-<form action="RMS" method="post" name="registerForm" onsubmit="return passCheck()">
+<form action="RS" method="post" name="registerForm" onsubmit="return passCheck()">
 ID : <input type="text" name="id" required="required"><br><br>
 PASSWORD : <input type="password" name="password" required="required"><br><br>
 PASSWORD CONFIRM : <input type="password" name="repassword" required="required"><br><br>

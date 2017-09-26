@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/model/MemberDAO.java=UTF-8
+encoding//src/servlet/controller/AllMemberServlet.java=UTF-8
+encoding//src/servlet/controller/LogoutServlet.java=UTF-8
+encoding//src/servlet/controller/RegisterServlet.java=UTF-8
