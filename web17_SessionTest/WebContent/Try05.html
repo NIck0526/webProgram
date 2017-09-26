@@ -107,7 +107,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 <div class="w3-main">
 <div class="w3-container">
-  <a href="register.html" class="w3-bar-item w3-button w3-large"><i class="fa fa-child"></i></a>
+  <a href="#memberModal" class="w3-bar-item w3-button w3-large" data-toggle="modal"><i class="fa fa-child"></i></a>
   <a href="login.html" class="w3-bar-item w3-button w3-large"><i class="	fa fa-reddit-alien"></i></a>
   <a href="logout.jsp" class="w3-bar-item w3-button w3-large"><i class="	fa fa-code"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-xlarge w3-right"><i class="fa fa-linkedin"></i></a>
@@ -586,18 +586,30 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           <h4><span class="glyphicon glyphicon-lock"></span> Sign up</h4>
         </div>
         <div class="modal-body">
-          <form role="form">
+          <form role="form" action="RegisterServlet" name="registerForm" method="post" >
             <div class="form-group">
               <i class="material-icons" style= "color:black">local_offer</i>
-               <input type="text" class="form-control" id="usrname" placeholder="Enter Your Name">
+               <input type="text" class="form-control" id="id" placeholder="Enter Your ID" required="required">
+            </div>
+            
+            <div class="form-group">
+              <i class="material-icons" style= "color:black">local_offer</i>
+               <input type="text" class="form-control" id="name" placeholder="Enter Your Name" required="required">
             </div>
             
             <div class="form-group">              
                <i class="material-icons" style= "color:black">person_add</i>
-              <input type="number" class="form-control" id="psw" placeholder="How many?">
+              <input type="number" class="form-control" id="password" placeholder="Enter Your Password" required="required">
              </div>
+            
+            <div class="form-group">
+              <i class="material-icons" style= "color:black">local_offer</i>
+               <input type="text" class="form-control" id="address" placeholder="Enter Your Address" required="required">
+            </div>
+            
+            
              
-              <button type="submit" class="btn btn-block">NEXT
+              <button type="submit" class="btn btn-block">Sign In
                 <span class="glyphicon glyphicon-ok"></span>
               </button>
           </form>
@@ -612,7 +624,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
   </div>
 
+
+<!-- ///////////////////// End Modal for Member ///////////////////////////////  -->
   
+ 
+ 
  
 <!-- Pagination -->
   <div class="w3-center w3-padding-32">
