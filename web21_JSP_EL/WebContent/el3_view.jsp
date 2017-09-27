@@ -7,20 +7,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>ServletContext 를 이용한 초기 파라미터 값 </h2><p>
-1. JSP 기본 Element를 이용해서 DD에 설정된 값 받아오기.<BR>
-Driver FQCN :: <%= application.getInitParameter("ODriver") %><br>
-
-
+1. Scriptlet으로 출력<p>
+<%
+	String[] menus = request.getParameterValues("menu");
+	for(String menu : menus){
+		
+%>
+<%= menu %>
+<%} %>
 <hr>
-2. EL 식을 이용해서 DD에 설정된 값 받아오기. <BR>
-Driver FQCN :: ${applicationScope.initParam.ODriver}
+2. EL 로 출력 :: EL에서는 Looping문을 다룰 수 없다. -->>> JSTL에서 다루겠다.<P>
+${paramValues.menu[0]} ${paramValues.menu[1]} ${paramValues.menu[2]} ${paramValues.menu[3]}
 </body>
 </html>
-
-
-
-
 
 
 

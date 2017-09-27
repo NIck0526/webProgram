@@ -7,21 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>ServletContext 를 이용한 초기 파라미터 값 </h2><p>
-1. JSP 기본 Element를 이용해서 DD에 설정된 값 받아오기.<BR>
-Driver FQCN :: <%= application.getInitParameter("ODriver") %><br>
 
-
-<hr>
-2. EL 식을 이용해서 DD에 설정된 값 받아오기. <BR>
-Driver FQCN :: ${applicationScope.initParam.ODriver}
+<script type="text/javascript">
+	alert("로그아웃 하셨습니다.");
+	
+	location.href="index.jsp";
+</script>
 </body>
 </html>
-
-
-
-
-
 
 
 
