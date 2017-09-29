@@ -6,7 +6,6 @@ public class Cart {
 	private int price;
 	private int quantity;
 	
-	
 	public String getImage() {
 		return image;
 	}
@@ -31,11 +30,5 @@ public class Cart {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	@Override
-	public String toString() {
-		return "Cart [image=" + image + ", name=" + name + ", price=" + price + ", quantity=" + quantity + "]";
-	}
-
-	
 	
 }
