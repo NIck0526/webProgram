@@ -167,7 +167,7 @@ public class BoardDao {
 			ps.setInt(1, no);
 			
 			int row = ps.executeUpdate(); // 1
-			
+			System.out.println("DELETE OK !! "+row); //delete가 되면 1(delelete되어진 row수)
 		}finally {
 			closeAll(ps, conn);
 		}
